@@ -1,0 +1,5 @@
+# Ignore latex compiled files
+resume.aux
+resume.fdb_latexmk
+resume.fls
+resume.log
