@@ -5,6 +5,32 @@
 
 \RequirePackage{titlesec}
 
+% Geometry package for page margins.
+\RequirePackage[
+  left=0.70in,
+  right=0.70in,
+  top=0.60in,
+  bottom=0.45in,
+  nohead,
+  includefoot]{geometry}
+
+% PDF settings and properties.
+\RequirePackage{hyperref}
+
+% XeLaTeX packages.
+\RequirePackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\RequirePackage{xunicode}
+\RequirePackage{xltxtra}
+
+% Font
+\setmainfont[
+  Path=./fonts/liberation_sans/,
+  ItalicFont=LiberationSans-Italic,
+  BoldFont=LiberationSans-Bold,
+  BoldItalicFont=LiberationSans-BoldItalic]
+  {LiberationSans-Regular.ttf}
+
 \titleformat{\section}
   {\Large\scshape\raggedright}
   {}{0em}
