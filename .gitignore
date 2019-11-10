@@ -7,3 +7,4 @@ resume.log
 # xelatex compiled files
 resume.out
 resume.aux
+missfont.log
