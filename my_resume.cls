@@ -10,6 +10,9 @@
 \RequirePackage{xunicode}
 \RequirePackage{xltxtra}
 
+% Remove page numbers
+\pagenumbering{gobble}
+
 % FontAwesome. Make sure PATH is correct
 \defaultfontfeatures{
   Path = /usr/local/texlive/2019/texmf-dist/fonts/opentype/public/fontawesome/ }
@@ -35,8 +38,9 @@
 % Get Colors
 \RequirePackage{xcolor}
 
-% Name color
+% defined colors
 \definecolor{name-color}{HTML}{880E4F}
+\definecolor{line-color}{HTML}{880E4F}
 
 % PDF settings and properties.
 \RequirePackage{hyperref}
@@ -44,11 +48,20 @@
 % Change title formatting
 \RequirePackage{titlesec}
 
+% href styling
+\hypersetup{
+  colorlinks,
+  linkcolor={red!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black}
+}
+
+% Change section formats
 \titleformat{\section}
   {\Large\scshape\raggedright}
   {}{0em}
   {}
-  [\titlerule]
+  [\color{line-color}\titlerule]
  
   \titleformat{\subsection}
   {\large\scshape\raggedright}
@@ -58,14 +71,25 @@
 % Commands
 
 \newcommand{\name}[1]{%
-  \raggedright{\Huge{\textcolor{name-color}{#1}}}
+  \raggedright{
+    \Huge{
+      \textcolor{name-color}{#1}
+    }
+    \hfill
+    \small{416-420-1792}
+    \newline
+  }
 }
 
 \newcommand{\linkedin}[2]{
-  \begin{flushleft}
-  \faLinkedin
-  \href{#1}{#2}
-  \end{flushleft}
+  \raggedright{
+    \faLinkedin
+    \thinspace
+    \href{#1}{#2}
+    \hfill
+    \small{krleitch.ca@gmail.com}
+    \newline
+  }
 }
 
 \newcommand{\datedsection}[2]{%
