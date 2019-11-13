@@ -2,7 +2,7 @@
 \ProvidesClass{my_resume}[2019/11/09 My resume class]
 
 % Based off article class
-\LoadClass{article}
+\LoadClass[10pt]{article}
 
 % XeLaTeX packages.
 \RequirePackage{fontspec}
@@ -41,6 +41,7 @@
 % defined colors
 \definecolor{name-color}{HTML}{880E4F}
 \definecolor{line-color}{HTML}{880E4F}
+\definecolor{date-color}{HTML}{9E9E9E}
 
 % PDF settings and properties.
 \RequirePackage{hyperref}
@@ -56,48 +57,76 @@
   urlcolor={blue!80!black}
 }
 
-% Change section formats
+% Change section format
 \titleformat{\section}
-  {\Large\scshape\raggedright}
+  {\Large\scshape\raggedright\bfseries}
   {}{0em}
   {}
   [\color{line-color}\titlerule]
  
-  \titleformat{\subsection}
-  {\large\scshape\raggedright}
+% Change subsection format
+\titleformat{\subsection}
+  {\large\scshape\raggedright\bfseries}
   {}{0em}
   {}
 
+% Change section spacing
+\titlespacing*{\section}
+  {0pt}{8pt}{8pt}
+
+% Change subsection spacing
+\titlespacing*{\subsection}
+  {0pt}{5pt}{5pt}
+
 % Commands
 
-\newcommand{\name}[1]{%
+% 1: name, 2: phone number
+\newcommand{\lineone}[2]{%
   \raggedright{
-    \Huge{
-      \textcolor{name-color}{#1}
-    }
-    \hfill
-    \small{416-420-1792}
-    \newline
+    \name{#1}
+    \strut\hfill
+    \phone{#2}
+    \newline%
   }
 }
+
+\newcommand{\name}[1]{
+  \Huge{
+    \textcolor{name-color}{#1}
+  }
+}
+
+\newcommand{\phone}[1]{
+  \small{#1}
+}
+
+% 1: linkedin link, 2: linkedin text
+% 3: github, 4: email
+\newcommand{\linetwo}[4]{%
+  \raggedright{%
+    \linkedin{#1}{#2} |%
+    \github{#3}%
+    \hspace{\fill}%
+    \email{#4}%
+    \vspace{.3\baselineskip}}}%
 
 \newcommand{\linkedin}[2]{
-  \raggedright{
-    \faLinkedin
-    \thinspace
-    \href{#1}{#2}
-    \hfill
-    \small{krleitch.ca@gmail.com}
-    \newline
-  }
+  \thinspace
+  \href{#1}{#2}
 }
 
-\newcommand{\datedsection}[2]{%
-  \section[#1]{#1 \hfill #2}%
+\newcommand{\github}[1] {
+  \normalsize{#1}
+}
+
+\newcommand{\email}[1]{
+  \small{#1}
 }
 
 \newcommand{\datedsubsection}[2]{%
-  \subsection[#1]{#1 \hfill #2}%
+  \subsection[#1]%
+    {#1 \hfill \textcolor{date-color}%
+    {\normalsize{\textit{#2}}}}%
 }
 
 \newcommand{\workitems}[3]{%
