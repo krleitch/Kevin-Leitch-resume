@@ -101,22 +101,22 @@
 }
 
 % 1: linkedin link, 2: linkedin text
-% 3: github, 4: email
-\newcommand{\linetwo}[4]{%
+% 3: github link, 4: github text
+% 5: email
+\newcommand{\linetwo}[5]{%
   \raggedright{%
     \linkedin{#1}{#2} |%
-    \github{#3}%
+    \github{#3}{#4}%
     \hspace{\fill}%
-    \email{#4}%
+    \email{#5}%
     \vspace{.3\baselineskip}}}%
 
 \newcommand{\linkedin}[2]{
-  \thinspace
   \href{#1}{#2}
 }
 
-\newcommand{\github}[1] {
-  \normalsize{#1}
+\newcommand{\github}[2] {
+  \href{#1}{#2}
 }
 
 \newcommand{\email}[1]{
