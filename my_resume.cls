@@ -14,9 +14,11 @@
 \pagenumbering{gobble}
 
 % FontAwesome. Make sure PATH is correct
-\defaultfontfeatures{
-  Path = /usr/local/texlive/2019/texmf-dist/fonts/opentype/public/fontawesome/ }
-\RequirePackage{fontawesome}
+%\defaultfontfeatures{
+%  for OSX 
+%  Path = /usr/local/texlive/2019/texmf-dist/fonts/opentype/public/fontawesome/ }
+%   Path = C:\Program Files\MiKTeX 2.9\fonts\opentype\public\fontawesome\ }
+\RequirePackage{fontawesome5}
 
 % Use liberation sans font
 \setmainfont[
