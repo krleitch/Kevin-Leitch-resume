@@ -30,10 +30,10 @@
 
 % Geometry package for page margins
 \RequirePackage[
-  left=0.70in,
-  right=0.70in,
-  top=0.60in,
-  bottom=0.45in,
+  left=0.35in,
+  right=0.35in,
+  top=0.25in,
+  bottom=0.25in,
   nohead,
   includefoot]{geometry}
 
@@ -50,6 +50,9 @@
 
 % Change title formatting
 \RequirePackage{titlesec}
+
+% for adjusting leftmargin
+\RequirePackage{enumitem}
 
 % href styling
 \hypersetup{
@@ -99,7 +102,7 @@
 }
 
 \newcommand{\phone}[1]{
-  \small{#1}
+  \small\faMobile*~\small{#1}
 }
 
 % 1: linkedin link, 2: linkedin text
@@ -107,22 +110,29 @@
 % 5: email
 \newcommand{\linetwo}[5]{%
   \raggedright{%
-    \linkedin{#1}{#2} |%
+    \linkedin{#1}{#2}%
     \github{#3}{#4}%
     \hspace{\fill}%
     \email{#5}%
     \vspace{.3\baselineskip}}}%
 
 \newcommand{\linkedin}[2]{
-  \href{#1}{#2}
+  \faLinkedin~\href{#1}{#2}
 }
 
 \newcommand{\github}[2] {
-  \href{#1}{#2}
+  \faGithub~\href{#1}{#2}
 }
 
 \newcommand{\email}[1]{
-  \small{#1}
+  \faEnvelope[regular]~\small{#1}
+}
+
+\newcommand{\skillitem}[2]{%
+  \begin{itemize}[align=left,leftmargin=7em,itemindent=0pt,labelsep=0pt,labelwidth=7em]
+    \raggedright
+    \item[\textbf{#1}:] #2
+  \end{itemize}
 }
 
 \newcommand{\datedsubsection}[2]{%
@@ -131,10 +141,41 @@
     {\normalsize{\textit{#2}}}}%
 }
 
-\newcommand{\workitems}[3]{%
-    \begin{itemize}
+% TODO
+% Make a variable arg function later when you are bored
+% https://davidyat.es/2016/07/27/writing-a-latex-macro-that-takes-a-variable-number-of-arguments/
+
+\newcommand{\workitemsone}[1]{%
+    \begin{itemize}[leftmargin=.25in]
+    \item #1
+    \end{itemize}%
+}
+
+\newcommand{\workitemstwo}[2]{%
+    \begin{itemize}[leftmargin=.25in]
+    \item #1
+    \item #2
+    \end{itemize}%
+}
+
+\newcommand{\workitemsthree}[3]{%
+    \begin{itemize}[leftmargin=.25in]
     \item #1
     \item #2
     \item #3
     \end{itemize}%
+}
+
+\newcommand{\datedsubsectionlink}[4]{%
+  \subsection[#1]%
+    {#1 - \href{#2}{#3} \hfill \textcolor{date-color}%
+    {\normalsize{\textit{#4}}}}%
+}
+
+\newcommand{\projectitem}[1]{%
+  \textnormal{#1}
+}
+
+\newcommand{\interestitem}[1]{%
+  \textnormal{#1}
 }

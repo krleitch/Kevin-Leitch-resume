@@ -10,7 +10,6 @@
     pdfproducer={},
     pdfkeywords={},
     unicode=true,
-    bookmarks=true,
     bookmarksopen=true,
     pdfstartview=FitH,
     pdfpagelayout=OneColumn,
@@ -28,43 +27,58 @@
         {github.com/krleitch}
         {krleitch.ca@gmail.com}
 
+% Summary of Skills
+\section{Summary of Skills}
+\skillitem{Languages}{C++, C, Python, JavaScript \& TypeScript, Java, OCaml, Racket}
+\skillitem{Technologies}{AngularJS, Angular2+, React, Express, Flask, MySql, Postgres, MongoDB, Redis, Docker, Ansible, RxJS, Spring}
+\skillitem{Development}{Git, Jira, Agile Methodologies, Android SDK, Jenkins, Linux, REST}
+
 % Work Experience
-\section{Work}
+\section{Work Experience}
 
-\datedsubsection{Zola}{2019-Now}
-\workitems
-{CMS for user experience, onboarding new users}
-{Integrated Centralized deployment with Ansible}
-{Backend work}
+\datedsubsection{Zola - Software Developer}{New York, Sept 2019 - Dec 2019}
+\workitemsthree
+{Integrated Centralized deployment for production and development environments with Ansible AWX allowing for queued builds
+and parallel execution resulting in no more blocked deployments whcih were cosntant in the old decentralized process}
+{Created Content Management System for targeted user signup questionnaires allowing marketing to easily change questions and collect data faster leading to increased user engagement}
+{Used Stripe API to remember payment details in accordance to security and data measures allowing for faster checkouts}
 
-\datedsubsection{Ultimate Software}{2019-Now}
-\workitems
-{CMS for user experience, onboarding new users}
-{Integrated Centralized deployment with Ansible}
-{Backend work}
+\datedsubsection{Ultimate Software - Software Developer}{Toronto, Jan 2019 - Apr 2019}
+\workitemsthree
+{Implemented Multi-level caching scheme for multiple applications using EhCache and Redis}
+{Created large set of Unit and Integration Tests for old untested code, Along with working test suite plan now required for all future code}
+{Helped Implement a gateway using Netflix Zuul for dynamic routing between product services, decreasing server loads and optimizing performance}
 
-\datedsubsection{Sony}{2018-Now}
-\workitems
-{CMS for user experience, onboarding new users}
-{Integrated Centralized deployment with Ansible}
-{Backend work}
+\datedsubsection{Sony - Software Developer}{Waterloo, May 2018 - Aug 2018}
+\workitemstwo
+{Worked on Experimental Technology app from the starting design phase, to interacting with product testers and re iterating on design decisions}
+{Created and Implemented plan to work around hardware constraints offloading intense processing to centralized server and increasing performance drastically}
 
-\datedsubsection{Microdea}{2017-Now}
-\workitems
-{CMS for user experience, onboarding new users}
-{Integrated Centralized deployment with Ansible}
-{Backend work}
+\datedsubsection{Microdea - Full Stack Developer}{Markham, Sept 2017 - Dec 2017}
+\workitemstwo
+{Redesgined entire web site from old java framework to Angular2+, drastically increasing web performance}
+{Worked with quality assurance to create testing plan}
+
+\datedsubsection{Imagine Communications - Full Stack \& QA }{Waterloo, Jan 2017 - Apr 2017 \& May 2016 - Aug 2016} 
+\workitemstwo
+{Took proof of concept Video Sports Web Casting Replay system and created web application presented at NAB 2017 trade show}
+{Created an automated test suite, speeding up QA work drastically and setup regression tests and overnight procedures}
 
 % Projects
 \section{Projects}
-\datedsubsection{Spot}{2018-Now}
+
+\datedsubsectionlink{Spot: Social Media Web Application}{https://spottables.com}{\faChrome~spottables.com}{2019 - Present}
+\projectitem{Location based Anonymous posts you can share with friends - MEAN Stack, Pug, Facebook Graph API, Google Api, Tensorflow, Passport.js }
+
+\datedsubsectionlink{WhatsTheHype}{https://github.com/krleitch/WhatsTheHype}{\faGithub~Github}{Jan 2021}
+\projectitem{Compare the performance of a stock to how many times its ticker is mentioned on a subreddit - Python3, Numpy, Pandas}
 
 % Education
 \section{Education}
-\datedsubsection{University of Waterloo - Computer Science}{2005-2020}
+\datedsubsection{University of Waterloo - Bachelor of Computer Science, Honours, Co-op}{2015 - 2020}
 
 % Interests
 \section{Interests}
-Guitar, Gym, Stuff, Running
+\interestitem{Guitar, Powerlifting, Running}
 
 \end{document}
