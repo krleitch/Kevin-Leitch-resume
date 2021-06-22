@@ -44,9 +44,13 @@
 \definecolor{name-color}{HTML}{880E4F}
 \definecolor{line-color}{HTML}{880E4F}
 \definecolor{date-color}{HTML}{9E9E9E}
+\definecolor{link-color}{HTML}{4C74B9}
 
 % PDF settings and properties.
-\RequirePackage{hyperref}
+\RequirePackage[colorlinks=true]{hyperref}
+\hypersetup{
+  linkcolor=blue,
+}
 
 % Change title formatting
 \RequirePackage{titlesec}
@@ -55,12 +59,6 @@
 \RequirePackage{enumitem}
 
 % href styling
-\hypersetup{
-  colorlinks,
-  linkcolor={red!50!black},
-  citecolor={blue!50!black},
-  urlcolor={blue!80!black}
-}
 
 % Change section format
 \titleformat{\section}
@@ -168,7 +166,7 @@
 
 \newcommand{\datedsubsectionlink}[4]{%
   \subsection[#1]%
-    {#1 - \href{#2}{#3} \hfill \textcolor{date-color}%
+    {#1 - \href{#2}{{\color{link-color}{\underline{#3}}}} \hfill \textcolor{date-color}%
     {\normalsize{\textit{#4}}}}%
 }
 
