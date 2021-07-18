@@ -170,8 +170,11 @@
     {\normalsize{\textit{#4}}}}%
 }
 
-\newcommand{\projectitem}[1]{%
-  \textnormal{#1}
+\newcommand{\projectitem}[2]{%
+  \textbf{About:} {#1}
+  \begin{itemize}[leftmargin=.25in]
+  \item #2
+  \end{itemize}%
 }
 
 \newcommand{\interestitem}[1]{%
