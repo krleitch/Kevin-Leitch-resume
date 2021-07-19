@@ -20,6 +20,10 @@
 %   Path = C:\Program Files\MiKTeX 2.9\fonts\opentype\public\fontawesome\ }
 \RequirePackage{fontawesome5}
 
+% Tables
+\RequirePackage{multirow}
+\RequirePackage{tabularx}
+
 % Use liberation sans font
 \setmainfont[
   Path=./fonts/liberation_sans/,
@@ -52,6 +56,8 @@
   linkcolor=blue,
 }
 
+\RequirePackage{anyfontsize}
+
 % Change title formatting
 \RequirePackage{titlesec}
 
@@ -83,20 +89,30 @@
 
 % Commands
 
-% 1: name, 2: phone number
-\newcommand{\lineone}[2]{%
-  \raggedright{
-    \name{#1}
-    \strut\hfill
-    \phone{#2}
-    \newline%
-  }
+\newcommand{\myhead}[7]{%
+  \begin{table}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}X@{}}
+    \multirow{2}{*}{\name{#1}}
+    &\linkedin{#2}{#3} &\phone{#4} \\
+    &\github{#5}{#6} &\email{#7}
+  \end{tabularx}
+  \end{table}
 }
 
+
+% 1: name, 2: phone number
+% \newcommand{\lineone}[2]{%
+%   \raggedright{
+%     \name{#1}
+%     \strut\hfill
+%     \phone{#2}
+%     \newline%
+%   }
+% }
+
 \newcommand{\name}[1]{
-  \Huge{
-    \textcolor{name-color}{#1}
-  }
+  \fontsize{30}{38}\selectfont\textcolor{name-color}{#1}
 }
 
 \newcommand{\phone}[1]{
@@ -106,13 +122,13 @@
 % 1: linkedin link, 2: linkedin text
 % 3: github link, 4: github text
 % 5: email
-\newcommand{\linetwo}[5]{%
-  \raggedright{%
-    \linkedin{#1}{#2}%
-    \github{#3}{#4}%
-    \hspace{\fill}%
-    \email{#5}%
-    \vspace{.3\baselineskip}}}%
+% \newcommand{\linetwo}[5]{%
+%   \raggedright{%
+%     \linkedin{#1}{#2}%
+%     \github{#3}{#4}%
+%     \hspace{\fill}%
+%     \email{#5}%
+%     \vspace{.3\baselineskip}}}%
 
 \newcommand{\linkedin}[2]{
   \faLinkedin~\href{#1}{#2}
@@ -175,6 +191,10 @@
   \begin{itemize}[leftmargin=.25in]
   \item #2
   \end{itemize}%
+}
+
+\newcommand{\projectitemone}[1]{%
+  \textbf{About:} {#1}
 }
 
 \newcommand{\interestitem}[1]{%
