@@ -89,6 +89,8 @@
 
 % Commands
 
+% HEADER
+
 \newcommand{\myhead}[7]{%
   \begin{table}
   \renewcommand{\arraystretch}{1.2}
@@ -100,17 +102,6 @@
   \end{table}
 }
 
-
-% 1: name, 2: phone number
-% \newcommand{\lineone}[2]{%
-%   \raggedright{
-%     \name{#1}
-%     \strut\hfill
-%     \phone{#2}
-%     \newline%
-%   }
-% }
-
 \newcommand{\name}[1]{
   \fontsize{30}{38}\selectfont\textcolor{name-color}{#1}
 }
@@ -118,17 +109,6 @@
 \newcommand{\phone}[1]{
   \small\faMobile*~\small{#1}
 }
-
-% 1: linkedin link, 2: linkedin text
-% 3: github link, 4: github text
-% 5: email
-% \newcommand{\linetwo}[5]{%
-%   \raggedright{%
-%     \linkedin{#1}{#2}%
-%     \github{#3}{#4}%
-%     \hspace{\fill}%
-%     \email{#5}%
-%     \vspace{.3\baselineskip}}}%
 
 \newcommand{\linkedin}[2]{
   \faLinkedin~\href{#1}{#2}
@@ -141,6 +121,8 @@
 \newcommand{\email}[1]{
   \faEnvelope[regular]~\small{#1}
 }
+
+% SKILLS
 
 \newcommand{\skillitem}[2]{%
   \begin{itemize}[align=left,leftmargin=7em,itemindent=0pt,labelsep=0pt,labelwidth=7em]
@@ -155,9 +137,11 @@
     {\normalsize{\textit{#2}}}}%
 }
 
-% TODO
+% TODO:
 % Make a variable arg function later when you are bored
 % https://davidyat.es/2016/07/27/writing-a-latex-macro-that-takes-a-variable-number-of-arguments/
+
+% WORK
 
 \newcommand{\workitemsone}[1]{%
     \begin{itemize}[leftmargin=.25in]
@@ -180,6 +164,8 @@
     \end{itemize}%
 }
 
+% PROJECTS
+
 \newcommand{\datedsubsectionlink}[4]{%
   \subsection[#1]%
     {#1 - \href{#2}{{\color{link-color}{\underline{#3}}}} \hfill \textcolor{date-color}%
@@ -196,6 +182,8 @@
 \newcommand{\projectitemone}[1]{%
   \textbf{About:} {#1}
 }
+
+% INTERESTS
 
 \newcommand{\interestitem}[1]{%
   \textnormal{#1}

@@ -19,6 +19,8 @@
 
 \begin{document}
 
+% HEADER
+
 \myhead
 {Kevin Leitch}
 {https://www.linkedin.com/in/kevinrleitch}
@@ -27,49 +29,40 @@
 {https://www.github.com/krleitch}
 {github.com/krleitch}
 {krleitch.ca@gmail.com}
-% Header content
-% \lineone{Kevin Leitch}{416-420-1792}
-% \linetwo{https://www.linkedin.com/in/kevinrleitch}
-%         {linkedin.com/in/kevinrleitch}
-%         {https://www.github.com/krleitch}
-%         {github.com/krleitch}
-%         {krleitch.ca@gmail.com}
 
 % Summary of Skills
 \section{Summary of Skills}
 \skillitem{Languages}
-{C++, C, Python, JavaScript \& TypeScript, Java, OCaml, Racket, C\#, Scala, HTML \& CSS / SASS}
+{C++, C, Python, JavaScript \& TypeScript, Elixir, Java, OCaml, Racket, Scala, HTML \& CSS / SASS}
 \skillitem{Technologies}
-{AngularJS, Angular2+, React, React Native, RxJS, Redux, NodeJs, Express, MySql, Postgres,
- MongoDB, Redis, Nginx, Spring, Flask, Play, .NET, JEST, Jasmine, Selenium, Bootstrap, RabbitMq, Netflix Zuul}
+{Angular2+, React, React Native, AngularJs, Phoenix, RxJS, Redux, NodeJs, Express, MySql, Postgres,
+ MongoDB, Redis, Nginx, Spring, Flask, Play, .NET, Jest, Jasmine, Selenium, RabbitMQ, Netflix Zuul}
 \skillitem{Dev Tools}
 {Git, Docker, Kubernetes, Ansible, Vagrant, AWS (Lambda, EC2, S3, ECR, RDS, SES...),
- Android SDK, Jenkins, Github Actions, Windows, Linux, Mac, Jira, Agile Methodologies, RESTful API, Websockets}
+ Jenkins, Github Actions, Prometheus, Jira, Agile Methodologies, RESTful API, GraphQL}
 
 % Work Experience
 \section{Work Experience}
 
 \datedsubsection{Zola - Software Developer}{New York, Sept 2019 - Dec 2019}
 \workitemsthree
-{Setup centralized deployment with web interface for production and development environments using Ansible AWX allowing for queueing,
- parallel builds, and additional logging. This resulted in no more blocked deployments saving every dev many minutes on daily deploys.}
-{Designed content management system with react front end for creating targeted user signup questionnaires for all new users on zola.com. This allowed marketing
- to easily change questions allowing for better user feedback and increased engagement.}
-{Used Stripe API to remember payment details in accordance with security and data laws allowing for faster checkouts.}
+{Setup centralized deployment with web interface for production and development environments using Ansible AWX allowing for queueing, parallel builds, and additional logging. This resulted in no more blocked deployments saving every dev many minutes on daily deploys.}
+{Designed content management system with react front end for creating targeted user signup questionnaires for all new users on zola.com. This allowed marketing to easily update and manage questions allowing for better user feedback and increased engagement.}
+{Used Stripe API to remember payment details in accordance with security and data laws allowing for faster checkouts and a better user experience.}
 
 \datedsubsection{Ultimate Software - Software Developer}{Toronto, Jan 2019 - Apr 2019}
 \workitemsthree
 {Helped implement a gateway using Netflix Zuul for dynamic routing between product services,
- resulting in decreasing server loads and optimizing performance across shards.}
-{Implemented multi-level caching scheme for multiple applications comparing Redis vs EhCache schemes.}
+ resulting in decreased server loads and optimizing performance across shards.}
+{Implemented multi-level caching scheme for multiple applications comparing Redis vs EhCache. Compared performance and memory usage in creating a detailed document displaying trade-offs which resulted in Redis being selected.}
 {Created large set of unit and integration tests using Spring MVC Testing framework for old untested code.
  Designed a new test suite plan required for all future code to help achieve 100\% code test coverage.}
 
 \datedsubsection{Sony - Software Developer}{Waterloo, May 2018 - Aug 2018}
 \workitemstwo
-{Worked on experimental technology app from the starting design phase, to the first implementation, and interacting
+{Worked on experimental technology app for private customer from the starting design phase, to the first implementation, and interacting
 with product testers and customers to iterate on design decisions.}
-{After dealing with slow processing speeds due to unchangeable hardware limitations, designed and pitched ideas on how to offload
+{After dealing with slow processing speeds due to unchangeable hardware limitations, designed and pitched idea on how to offload
 processing to a centralized server which were ultimately accepted and fixed bottlenecks.}
 
 \datedsubsection{Microdea - Full Stack Developer}{Markham, Sept 2017 - Dec 2017}
@@ -82,27 +75,21 @@ processing to a centralized server which were ultimately accepted and fixed bott
 {Took proof of concept video sports web casting replay system and created web application with AngularJs
  which was presented at NAB 2017 trade show.}
 {Created an automated test suite for media workflow ecosystem, speeding up quality assurance work drastically with new regression tests
- automated to run nightly since testing was a long process.}
+ automated to run nightly since testing was a long often overnight process.}
 
 % Projects
-\section{Projects}
+ \section{Projects}
 
 \datedsubsectionlink{Spot: Social Media Web App}{https://spottables.com}
-{\faChrome~spottables.com (User: SpotGuest, Pass: Welcome1)}{Jan 2020 - Now}
+{\faChrome~spottables.com (User: SpotGuest, Pass: Welcome1*)}{Jan 2020 - Now}
 \projectitem
-{Location based anonymous social media board you can share with friends in secret.}
-{Angular10, MySql8, Express, NodeJs, Facebook Graph API, Google API, Tensorflow, Passport.js,
-  using AWS and containerization with Github Actions development pipelines, IOS/Android react native app in development.}
+{Location based anonymous social media board with chat you can share with friends in secret.}
+{Angular13 w/ NgRx web app. NodeJs w/ Express API. Elixir w/ Phoenix channels for chat websockets. Postgres w/ PostGis for location querys. Facebook \& Google API for OAuth. Tensorflow for image classification. Deployed on AWS with Github actions pipelines, Ios/Android react native app in development.}
 
 \datedsubsectionlink{WhatsTheHype: Stock Vs Subreddit Mentions}{https://github.com/krleitch/WhatsTheHype}{\faGithub~github.com/krleitch/WhatsTheHype}{Jan 2021}
 \projectitem
 {Compare the performance of a stock to how many times the ticker is mentioned on any subreddit.}
-{Python3, yFinance Api, Reddit Api, Pushshift Api, Numpy, Pandas, matplotlib.}
-
-\datedsubsectionlink{Video Game Map Design}{https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/maps/1527573-parkour-king-jump-map}
-{\faChrome~Map Homepage}{Jan 2013}
-\projectitemone
-{Created and marketed Minecraft map which received \textbf{90,000+} downloads with revenue generating ads.}
+{Python3, yFinance API, Reddit API, Pushshift API, Numpy, Pandas, matplotlib.}
 
 % Education
 \section{Education}
@@ -110,6 +97,6 @@ processing to a centralized server which were ultimately accepted and fixed bott
 
 % Interests
 \section{Interests}
-\interestitem{Guitar, Powerlifting, Running, Cooking, Chess, Hockey, Basketball, Tennis, Gaming, Hackathons, Open Source.}
+\interestitem{Guitar, powerlifting, running, cooking, chess, basketball, hockey, tennis, hackathons, open source.}
 
 \end{document}
