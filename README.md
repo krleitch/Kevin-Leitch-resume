@@ -1,4 +1,4 @@
-# Kevin Leitch - Resume - Updated 8/17/2022
+# Kevin Leitch - Resume - Updated 9/01/2022
 
 <object data="https://github.com/krleitch/resume/blob/master/resume.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/krleitch/resume/blob/master/resume.pdf">
