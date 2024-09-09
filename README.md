@@ -2,7 +2,7 @@
 
 <object data="https://github.com/krleitch/resume/blob/master/resume.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/krleitch/resume/blob/master/resume.pdf">
-        <p> <a href="https://github.com/krleitch/resume/blob/master/resume.pdf">View PDF to download</a>.</p>
+        <p> <a href="https://github.com/krleitch/resume/blob/master/resume.pdf">View PDF to download</a></p>
     </embed>
 </object>
 
